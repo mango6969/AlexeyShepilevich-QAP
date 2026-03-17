@@ -6,9 +6,12 @@ print(result)
 
 # Задание №2
 
-my_list = [-1, 2, 3]
+x = int(input())
+y = int(input())
+z = int(input())
+
 count = 0
-for i in my_list:
+for i in x, y, z:
     if i > 0:
         count += 1
 print(count)
@@ -17,21 +20,19 @@ print(count)
 
 year = int(input())
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("366")
-        else:
-            print("365")
-    else:
-        print("366")
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("366")
 else:
     print("365")
+
 
 # Задание №4
 
 a = int(input())
 b = int(input())
+
+if a > b:
+    a, b = b, a
 
 total = 0
 
