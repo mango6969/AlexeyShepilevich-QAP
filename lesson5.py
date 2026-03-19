@@ -69,7 +69,7 @@ print(result)
 # Задание №6
 
 
-def build_profile(**kwargs: object) -> dict:
+def build_profile(**kwargs: dict) -> dict:
     """
     Функция build_profile(**kwargs) принимает любые именованные аргументы и
     возвращает словарь с этими данными плюс автоматически добавляет ключ 'registered': True

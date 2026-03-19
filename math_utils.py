@@ -6,7 +6,7 @@ def cube(a: int) -> int:
     return a**3
 
 
-def is_even(a: int) -> bool:
+def is_even(a: int | float) -> bool:
     return a % 2 == 0
 
 
