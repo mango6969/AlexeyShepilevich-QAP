@@ -19,7 +19,7 @@ def copy_file(source: str, destination: str) -> bool:
             file2.write(content)
 
         return True
-    except Exception as e:
+    except OSError as e:
         print("Error:", e)
         return False
 

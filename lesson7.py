@@ -30,7 +30,7 @@ print(result)
 """Напишите генератор chunked(lst, size), который разбивает список на куски заданного размера и поочередно их выдает. Например, chunked([1,2,3,4,5], 2) → [1,2], [3,4], [5]."""
 
 
-def chunked(lst: list, size: int) -> Generator:
+def chunked(lst: list, size: int) -> Generator[list, None, None]:
     for i in range(0, len(lst), size):
         yield lst[i : i + size]
 
@@ -95,7 +95,7 @@ class NegativeNumberError(Exception):
     pass
 
 
-def sqrt_safe(n: int) -> int:
+def sqrt_safe(n: float) -> float:
 
     if n < 0:
         raise NegativeNumberError("n не может быть отрицательным")

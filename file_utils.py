@@ -4,7 +4,7 @@ def read_lines(filename: str) -> list:
         return f.readlines()
 
 
-def write_lines(filename: str, lines: list) -> bool:
+def write_lines(filename: str, lines: list[str]) -> bool:
 
     with open(filename, "w", encoding="utf-8") as f:
         f.writelines(lines)
