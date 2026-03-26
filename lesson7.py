@@ -46,7 +46,8 @@ for chunk in chunked(numbers, 2):
 
 
 def prime_numbers() -> Generator:
-    for num in range(2, 10**9):
+    num = 2
+    while True:
         is_prime = True
 
         for i in range(2, int(num**0.5) + 1):
@@ -56,6 +57,7 @@ def prime_numbers() -> Generator:
 
         if is_prime:
             yield num
+        num += 1
 
 
 gen = prime_numbers()
@@ -87,7 +89,7 @@ print(result)
 
 # Задание №6
 
-"""Создайте собственный класс исключения NegativeNumberError. Напишите функцию sqrt_safe(n), 
+"""Создайте собственный класс исключения NegativeNumberError. Напишите функцию sqrt_safe(n),
 которая считает квадратный корень из числа, но при отрицательном n выбрасывает NegativeNumberError с понятным сообщением."""
 
 
@@ -109,7 +111,7 @@ except NegativeNumberError as e:
 
 # Задание №7
 
-"""Напишите функцию-калькулятор calculator(a, b, op), где op — строка ("+", "-", "*", "/"). 
+"""Напишите функцию-калькулятор calculator(a, b, op), где op — строка ("+", "-", "*", "/").
 Обработайте все возможные исключения: деление на ноль, неизвестная операция, некорректные типы аргументов."""
 
 
